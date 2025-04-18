@@ -1,0 +1,411 @@
+
+/*                                                               user container start                       */
+
+
+.user-container {
+  padding: 20px;
+}
+
+.user-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.user-form {
+  margin-bottom: 20px;
+}
+
+.user-form input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.user-form button {
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.user-form button:hover {
+  background-color: #0056b3;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table th, .user-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.user-table th {
+  background-color: #f2f2f2;
+}
+
+.action-btn {
+  margin: 0 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.edit-btn {
+  background-color: orange;
+  color: white;
+}
+
+.delete-btn {
+  background-color: red;
+  color: white;
+}
+
+
+
+/*                                                                         user container end                                 */
+
+
+
+/*                                                  sidebar started                                   */
+
+/* Sidebar Toggle Icon Button */
+.sidebar-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  background-color: transparent;
+  border: none;
+  color:grey;
+  z-index: 1001;
+  cursor: pointer;
+}
+
+/* Sidebar Container */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background-color: #1e1e2f;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* Sidebar when open */
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar nav a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 15px;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  font-weight: bold;
+  color: #00bfff;
+}
+/*                                                              sidebar end                                     */
+
+
+
+/*                                                                         dashboard container  started                */
+
+
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.dashboard-content {
+  margin-left: 220px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+
+
+/* Center box */
+.dashboard-card-container {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Heading */
+.dashboard-card-container h1 {
+  margin-bottom: 30px;
+  font-size: 26px;
+  color: #333;
+}
+
+/* Stat boxes */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card h3 {
+  background-color: #f6f8fc;
+  border: 1px solid #ccc;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #444;
+  transition: all 0.3s ease;
+}
+
+.card h3:hover {
+  background-color: #eaeef5;
+}
+
+/* ✅ Responsive Styles */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .dashboard-content {
+    margin-left: 0;
+    padding: 40px 15px;
+  }
+
+  .dashboard-card-container {
+    padding: 30px 20px;
+    max-width: 90%;
+  }
+
+  .dashboard-card-container h1 {
+    font-size: 22px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+}
+
+/*                                                                   dashboard container end                               */
+
+
+
+
+
+
+/*                                                      todo started                                 */
+
+
+/* Todo.css */
+
+/* Overall container styling */
+.todo-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f6f9;
+  justify-content: center; /* Center the main content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+
+.todo-content {
+  width: 100%;
+  max-width: 1200px; /* Restrict maximum width */
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Form input and button styling */
+.todo-form {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+
+.todo-form input,
+.date-picker {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  flex: 1;
+}
+
+.todo-form button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.todo-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Task columns layout */
+.task-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Column for Pending/Completed tasks */
+.task-column {
+  flex: 1;
+  min-width: 300px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.task-column h3 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+  text-align: center;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* Task styling */
+.task {
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  transition: transform 0.2s;
+  user-select: none;
+}
+
+.task:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.task h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.task-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.task-buttons button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.task-buttons .complete {
+  background-color: #28a745;
+  color: white;
+}
+
+.task-buttons .complete:hover {
+  background-color: #218838;
+}
+
+.task-buttons .delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.task-buttons .delete:hover {
+  background-color: #c82333;
+}
+
+.task-buttons .disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Calendar Tooltip and Hover */
+.react-calendar__tile:enabled:hover {
+  background-color: #ff8c00 !important; /* Orange hover effect */
+  color: white !important;
+}
+
+.react-calendar__tile:enabled:focus {
+  background-color: black !important;
+  color: white !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .task-columns {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .todo-form {
+    flex-direction: column;
+  }
+
+  .todo-form input,
+  .todo-form button {
+    width: 100%;
+  }
+}
+
+/*                                           todo end                                                          */
